@@ -8,6 +8,16 @@ terraform {
   }
 
   required_version = ">= 1.1.0"
+
+#/**
+  backend "azurerm" {
+    storage_account_name  = "ziccarellistrg"
+    container_name        = "terraformcontainer"
+    key                   = "ardillas.tfstate"
+    access_key            = "RTcJ26E0yABSWX2NX9F2QbvMtvyLGA/riPRhx1UpLSBeR6mx+tggC/oh8KEojiDJ4ty5lwulDGoT+AStc0E+7w=="
+  }
+#*/
+
 }
 
 provider "azurerm" {

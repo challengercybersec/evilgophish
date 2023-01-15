@@ -207,13 +207,15 @@ resource "azurerm_linux_virtual_machine" "gophising" {
 
 #### Creaton of CDN
 
-/*
+
 resource "azurerm_cdn_profile" "cdn_profile" {
   name                = var.cdn_profile_name
   location            = azurerm_resource_group.rg_evilgophish.location
   resource_group_name = azurerm_resource_group.rg_evilgophish.name
   sku                 = "Standard_Microsoft"
 }
+
+
 
 resource "azurerm_cdn_endpoint" "cdn_endpoint_gophish" {
   name                = var.cdn_endpoint_name_gophish
@@ -246,6 +248,8 @@ resource "azurerm_cdn_endpoint" "cdn_endpoint_gophish" {
     }
   }
 }
+
+/*
 
 resource "azurerm_cdn_endpoint" "cdn_endpoint_evilginx1" {
   name                = var.cdn_endpoint_name_evilginx1
